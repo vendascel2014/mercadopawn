@@ -1,98 +1,168 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+    <meta name="description" content="mercado ps : MercadoLibre&#39;s PHP SDK">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Php-sdk by vendascel2014</title>
+    <title>mercado ps</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/vendascel2014/php-sdk">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Php-sdk</h1>
-            <h2>MercadoLibre&#39;s PHP SDK</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/vendascel2014/mercadopawn">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/vendascel2014/php-sdk/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/vendascel2014/php-sdk/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+          <h1 id="project_title">mercado ps</h1>
+          <h2 id="project_tagline">MercadoLibre&#39;s PHP SDK</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/vendascel2014/mercadopawn/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/vendascel2014/mercadopawn/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      <span class="banner-fix"></span>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="mercadolibres-php-sdk" class="anchor" href="#mercadolibres-php-sdk"><span class="octicon octicon-link"></span></a>MercadoLibre's PHP SDK</h1>
 
+<p>This is the official PHP SDK for MercadoLibre's Platform.</p>
 
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<h2>
+<a name="how-do-i-install-it" class="anchor" href="#how-do-i-install-it"><span class="octicon octicon-link"></span></a>How do I install it?</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>   clone repository
+   https://github.com/mercadolibre/php-sdk.git
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>
+<a name="how-do-i-use-it" class="anchor" href="#how-do-i-use-it"><span class="octicon octicon-link"></span></a>How do I use it?</h2>
+
+<p>The first thing to do is to instance a <code>Meli</code> class. You'll need to give a <code>clientId</code> and a <code>clientSecret</code>. You can obtain both after creating your own application. For more information on this please read: <a href="http://developers.mercadolibre.com/application-manager/">creating an application</a></p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="including-the-lib" class="anchor" href="#including-the-lib"><span class="octicon octicon-link"></span></a>Including the Lib</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Include the lib meli in your project</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<div class="highlight highlight-php"><pre><span class="k">require</span> <span class="s1">'/MercadoLivre/meli.php'</span><span class="p">;</span>
+</pre></div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Start the development!</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="create-an-instance-of-meli-class" class="anchor" href="#create-an-instance-of-meli-class"><span class="octicon octicon-link"></span></a>Create an instance of Meli class</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Simple like this</p>
+
+<div class="highlight highlight-php"><pre><span class="nv">$meli</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Meli</span><span class="p">(</span><span class="s1">'1234'</span><span class="p">,</span> <span class="s1">'a secret'</span><span class="p">);</span>
+</pre></div>
+
+<p>With this instance you can start working on MercadoLibre's APIs.</p>
+
+<p>There are some design considerations worth to mention.</p>
+
+<ol>
+<li><p>This SDK is just a thin layer on top of an http client to handle all the OAuth WebServer flow for you.</p></li>
+<li><p>There is JSON parsing. this SDK will include <a href="http://php.net/manual/en/book.json.php">json</a> for internal usage.</p></li>
+<li><p>This SDK will include <a href="http://php.net/manual/en/book.curl.php">curl</a> for internal usage.</p></li>
+<li><p>If you already have the access_token and the refresh_token you can pass in the constructor</p></li>
+</ol><div class="highlight highlight-php"><pre><span class="nv">$meli</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Meli</span><span class="p">(</span><span class="s1">'1234'</span><span class="p">,</span> <span class="s1">'a secret'</span><span class="p">,</span> <span class="s1">'Access_Token'</span><span class="p">,</span> <span class="s1">'Refresh_Token'</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="how-do-i-redirect-users-to-authorize-my-application" class="anchor" href="#how-do-i-redirect-users-to-authorize-my-application"><span class="octicon octicon-link"></span></a>How do I redirect users to authorize my application?</h2>
+
+<p>This is a 2 step process.</p>
+
+<p>First get the link to redirect the user. This is very easy! Just:</p>
+
+<div class="highlight highlight-php"><pre><span class="nv">$redirectUrl</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">getAuthUrl</span><span class="p">(</span><span class="s1">'http://somecallbackurl'</span><span class="p">);</span>
+</pre></div>
+
+<p>This will give you the url to redirect the user. You need to specify a callback url which will be the one that the user will redirected after a successfull authrization process.</p>
+
+<p>Once the user is redirected to your callback url, you'll receive in the query string, a parameter named <code>code</code>. You'll need this for the second part of the process.</p>
+
+<div class="highlight highlight-php"><pre><span class="nv">$user</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'code'</span><span class="p">],</span> <span class="s1">'http://somecallbackurl'</span><span class="p">);</span>
+</pre></div>
+
+<p>This will get an <code>access_token</code> and a <code>refresh_token</code> (is case your application has the <code>offline_access</code>) for your application and your user.</p>
+
+<p>At this stage your are ready to make call to the API on behalf of the user.</p>
+
+<h4>
+<a name="making-get-calls" class="anchor" href="#making-get-calls"><span class="octicon octicon-link"></span></a>Making GET calls</h4>
+
+<div class="highlight highlight-php"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="nv">$access_token</span><span class="p">);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'/users/me'</span><span class="p">,</span> <span class="nv">$params</span><span class="p">);</span>
+</pre></div>
+
+<h4>
+<a name="making-post-calls" class="anchor" href="#making-post-calls"><span class="octicon octicon-link"></span></a>Making POST calls</h4>
+
+<div class="highlight highlight-php"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="nv">$access_token</span><span class="p">);</span>
+
+  <span class="c1">#this body will be converted into json for you</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'bar'</span> <span class="o">=&gt;</span> <span class="s1">'foo'</span><span class="p">);</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">'/items'</span><span class="p">,</span> <span class="nv">$body</span><span class="p">,</span> <span class="nv">$params</span><span class="p">);</span>
+</pre></div>
+
+<h4>
+<a name="making-put-calls" class="anchor" href="#making-put-calls"><span class="octicon octicon-link"></span></a>Making PUT calls</h4>
+
+<div class="highlight highlight-php"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="nv">$access_token</span><span class="p">);</span>
+
+  <span class="c1">#this body will be converted into json for you</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'bar'</span> <span class="o">=&gt;</span> <span class="s1">'foo'</span><span class="p">);</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">(</span><span class="s1">'/items'</span><span class="p">,</span> <span class="nv">$body</span><span class="p">,</span> <span class="nv">$params</span><span class="p">);</span>
+</pre></div>
+
+<h4>
+<a name="making-delete-calls" class="anchor" href="#making-delete-calls"><span class="octicon octicon-link"></span></a>Making DELETE calls</h4>
+
+<div class="highlight highlight-php"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">'access_token'</span> <span class="o">=&gt;</span> <span class="nv">$access_token</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$meli</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="s1">'/questions/123'</span><span class="p">,</span> <span class="nv">$params</span><span class="p">)</span>
+</pre></div>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>Don't forget to check out our examples codes in the folder <a href="https://github.com/mercadolibre/php-sdk/tree/master/examples">examples</a></p>
+
+<h2>
+<a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h2>
+
+<p>You can contact us if you have questions using the standard communication channels described in the <a href="http://developers.mercadolibre.com/community/">developer's site</a></p>
+
+<h2>
+<a name="i-want-to-contribute" class="anchor" href="#i-want-to-contribute"><span class="octicon octicon-link"></span></a>I want to contribute!</h2>
+
+<p>That is great! Just fork the project in github. Create a topic branch, write some code, and add some tests for your new code.</p>
+
+<p>Thanks for helping!</p>
       </section>
+    </div>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/vendascel2014">vendascel2014</a> can be found on <a href="https://github.com/vendascel2014/php-sdk">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">mercado ps maintained by <a href="https://github.com/vendascel2014">vendascel2014</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-
     </div>
 
     
+
   </body>
 </html>
