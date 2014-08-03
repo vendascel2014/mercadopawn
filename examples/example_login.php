@@ -3,7 +3,7 @@ session_start('teste');
 
 require '../MercadoLivre/meli.php';
 
-$meli = new Meli('APP_ID', 'SECRET_KEY', $_SESSION['access_token'], $_SESSION['refresh_token']);
+$meli = new Meli('6354046892590528', 'NwaMSmIwhf2xp6E1mQlFTr4ljPSAmdcT', $_SESSION['access_token'], $_SESSION['refresh_token']);
 
 if($_GET['code'] || $_SESSION['access_token']) {
 
